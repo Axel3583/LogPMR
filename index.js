@@ -28,7 +28,7 @@ server.use(express.json()); // Middleware pour gérer les données JSON dans les
 server.use(helmet()); // Middleware Helmet pour renforcer la sécurité du serveur
 server.use(cors()); // Middleware CORS pour gérer les autorisations d'accès depuis différents domaines
 
-TaskRoute(server); // Utilisation des routes définies dans TaskRoute pour gérer les requêtes liées aux tâches
+server.post()
 
 // Middleware pour la gestion des erreurs (doit être le dernier middleware)
 server.use((err, req, res, next) => {
