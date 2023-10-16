@@ -4,12 +4,13 @@ const helmet = require("helmet"); // Middleware de sécurité pour Express
 const cors = require("cors"); // Middleware de gestion des CORS (Cross-Origin Resource Sharing)
 const dotenv = require("dotenv"); // Chargement des variables d'environnement
 const mongoose = require("mongoose"); // ODM (Object Data Modeling) pour MongoDB
-const UserRoute = require("./api/routes/userRoute").default; // Importation des routes de l'API // Importation des routes de l'API
+const  swaggerDocs = require("./api/utils/swagger");
+const UserRoute = require("./api/routes/userRoute"); // Importation des routes de l'API // Importation des routes de l'API
 
 dotenv.config(); // Charger les variables d'environnement
 
 const hostname = "0.0.0.0"; // L'adresse IP sur laquelle le serveur écoutera
-const port = 4000; // Le port sur lequel le serveur écoutera
+const port = 3000; // Le port sur lequel le serveur écoutera
 
 const server = express(); // Création de l'instance du serveur Express
 
@@ -29,8 +30,6 @@ server.use(express.json()); // Middleware pour gérer les données JSON dans les
 server.use(helmet()); // Middleware Helmet pour renforcer la sécurité du serveur
 server.use(cors()); // Middleware CORS pour gérer les autorisations d'accès depuis différents domaines
 
-server.post();
-
 UserRoute(server);
 
 // Middleware pour la gestion des erreurs (doit être le dernier middleware)
@@ -43,4 +42,5 @@ server.use((err, req, res, next) => {
 
 server.listen(port, hostname, () => {
   console.log(`Server is running on http://${hostname}:${port}`); // Démarrage du serveur Express sur l'adresse et le port spécifiés
+  swaggerDocs(server, port)
 });
