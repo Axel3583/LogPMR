@@ -1,4 +1,4 @@
-# SonarQube
+# Sonarcloud
 
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=Axel3583_LogPMR&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=Axel3583_LogPMR)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Axel3583_LogPMR&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=Axel3583_LogPMR)
