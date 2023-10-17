@@ -1,4 +1,4 @@
-# Logpmr
+# SonarQube
 
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=Axel3583_LogPMR&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=Axel3583_LogPMR)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Axel3583_LogPMR&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=Axel3583_LogPMR)
@@ -7,6 +7,7 @@
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=Axel3583_LogPMR&metric=bugs)](https://sonarcloud.io/summary/new_code?id=Axel3583_todo-electron)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=Axel3583_LogPMR&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=Axel3583_LogPMR)
 
+# Logpmr
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
