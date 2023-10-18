@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@logpmr/shared": ["shared/src/index.ts"],
+     
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
