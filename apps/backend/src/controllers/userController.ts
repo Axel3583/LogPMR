@@ -6,10 +6,11 @@ import { Request, Response } from 'express';
 const userController = {
     
     register: async (req: Request, res: Response): Promise<any> => {
+        const { email, password, role } = req.body;
+        const searchCondition = { email };
         try {
-            const { email, password, role } = req.body;
             
-            const existingUser = await User.findOne({ email });
+            const existingUser = await User.findOne({ searchCondition });
             if (existingUser) {
                 return res.status(400).json({ message: "Email already registered." });
             }
