@@ -2,12 +2,7 @@ import Tabbar from '@mindinventory/react-native-tab-bar-interaction';
 import React from 'react';
 import { MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
 import Colors from '../../constants/Colors';
-
-interface PropertyTabs {
-  name: string;
-  activeIcon: any;
-  inactiveIcon: any;
-}
+import { PropertyTabs } from '../../utils/models';
 
 export default function Tabs() {
   const tabs: PropertyTabs[] = [

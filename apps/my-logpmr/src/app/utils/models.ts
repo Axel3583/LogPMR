@@ -1,8 +1,15 @@
+import { ReactElement } from "react";
 
 export interface City {
     name: string,
     latitude: number,
     longitude: number
+  }
+
+export interface PropertyTabs {
+    name: string;
+    activeIcon: ReactElement<string, string>;
+    inactiveIcon: ReactElement<string, string>;
   }
   
   export default (): City[] => {
