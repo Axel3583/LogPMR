@@ -1,14 +1,14 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Carte } from './components/maps/carte';
+import Tabs from './components/myTabs/Tabs';
+import { MainNavigator } from './components/Navigation/NavigationRoot';
 
 export default function App() {
 
-
-
   return (
     <View style={styles.container}>
-      <Carte/>
+     <MainNavigator/>
     </View>
   );
 }
