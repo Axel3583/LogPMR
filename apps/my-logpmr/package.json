@@ -15,7 +15,11 @@
     "react-native-svg-transformer": "*",
     "react": "*",
     "react-native-maps": "*",
-    "@react-navigation/bottom-tabs": "*"
+    "@react-navigation/bottom-tabs": "*",
+    "react-native-safe-area-context": "*",
+    "@expo/vector-icons": "*",
+    "@react-navigation/native": "*",
+    "@react-navigation/native-stack": "*"
   },
   "scripts": {
     "eas-build-pre-install": "cd ../../ && node tools/scripts/eas-build-pre-install.mjs . apps/my-logpmr && cp package-lock.json apps/my-logpmr",
