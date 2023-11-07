@@ -1,6 +1,6 @@
 import React from "react";
 
-const TabContext = React.createContext({opened: false, toggleOpened: () => {}});
+const TabContext = React.createContext({opened: false, toggleOpened: () => {console.log('ok')}});
 
 export const TabContextProvider = ({children}) => {
   const [opened, setOpened] = React.useState(false);
