@@ -1,4 +1,6 @@
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { ReactElement } from "react";
+import { ReactNode } from "react";
 
 export interface City {
     name: string,
@@ -6,11 +8,25 @@ export interface City {
     longitude: number
   }
 
-export interface PropertyTabs {
-    name: string;
-    activeIcon: ReactElement<string, string>;
-    inactiveIcon: ReactElement<string, string>;
-  }
+export type RootStackParamList = {
+    Home: undefined;
+    Carte: undefined;
+  };
+
+export type Props = NativeStackScreenProps<RootStackParamList, 'Carte'>;
+export interface TabContextType {
+  opened: boolean;
+  toggleOpened: () => void;
+}
+
+export interface AddButtonProps {
+  opened: boolean;
+  toggleOpened: () => void;
+}
+
+export interface TabContextProviderProps {
+  children?: React.ReactNode; 
+}
   
   export default (): City[] => {
     return [

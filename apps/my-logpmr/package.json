@@ -19,7 +19,8 @@
     "react-native-safe-area-context": "*",
     "@expo/vector-icons": "*",
     "@react-navigation/native": "*",
-    "@react-navigation/native-stack": "*"
+    "@react-navigation/native-stack": "*",
+    "@mindinventory/react-native-tab-bar-interaction": "*"
   },
   "scripts": {
     "eas-build-pre-install": "cd ../../ && node tools/scripts/eas-build-pre-install.mjs . apps/my-logpmr && cp package-lock.json apps/my-logpmr",

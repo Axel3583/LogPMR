@@ -5,7 +5,7 @@ import Colors from '../../../constants/Colors'
 const ServiceScreen = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Service Screen</Text>
+      <Text style={styles.text}>Profil Screen</Text>
     </View>
   )
 }
