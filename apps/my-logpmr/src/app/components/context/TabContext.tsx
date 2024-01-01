@@ -1,17 +1,21 @@
 import React from "react";
+import { TabContextProviderProps, TabContextType } from "../../utils/models";
 
-const TabContext = React.createContext({opened: false, toggleOpened: () => {console.log('ok')}});
 
-export const TabContextProvider = ({children}) => {
+const TabContext = React.createContext<TabContextType>({ opened: false, toggleOpened: () => {console.log("ok")} });
+
+export const TabContextProvider: React.FC<TabContextProviderProps> = ({ children }) => {
   const [opened, setOpened] = React.useState(false);
 
   const toggleOpened = () => {
-    setOpened(!opened);
+    setOpened((prevOpened) => !prevOpened);
   };
 
+  const contextValue = React.useMemo(() => ({ opened, toggleOpened }), [opened]);
+
   return (
-    <TabContext.Provider value={{opened, toggleOpened}}>
-      {children}
+    <TabContext.Provider value={contextValue}>
+      { children }
     </TabContext.Provider>
   );
 };

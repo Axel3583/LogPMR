@@ -1,16 +1,23 @@
 import React from "react";
 
 import {
-  TouchableWithoutFeedback,
   View,
   StyleSheet,
   Image,
   Animated,
+  TouchableOpacity,
 } from "react-native";
 import COLORS from "../../constants/Colors";
+import { useNavigation } from "@react-navigation/native";
 
 const AddButton = ({opened, toggleOpened}) => {
+  const navigation = useNavigation();
   const animation = React.useRef(new Animated.Value(0)).current;
+
+  const handlePress = () => {
+    toggleOpened();
+    navigation.navigate('Carte'); 
+  };
 
   React.useEffect(() => {
     Animated.timing(animation, {
@@ -31,7 +38,8 @@ const AddButton = ({opened, toggleOpened}) => {
   return (
     <View style={styles.container}>
       <View style={styles.box}>
-        <TouchableWithoutFeedback>
+        <TouchableOpacity>
+
           <Animated.View
             style={[
               styles.item,
@@ -54,13 +62,15 @@ const AddButton = ({opened, toggleOpened}) => {
               },
             ]}>
             <Image
-              source={require("../../../../assets/images/Setting.png")}
+              source={require("../../../../assets/images/Home.png")}
               resizeMode="contain"
               style={styles.itemIcon}
             />
           </Animated.View>
-        </TouchableWithoutFeedback>
-        <TouchableWithoutFeedback>
+
+        </TouchableOpacity>
+
+        <TouchableOpacity  onPress={handlePress}>
           <Animated.View
             style={[
               styles.item,
@@ -77,13 +87,14 @@ const AddButton = ({opened, toggleOpened}) => {
               },
             ]}>
             <Image
-              source={require("../../../../assets/images/Setting.png")}
+              source={require("../../../../assets/images/map-marker-radius-outline.png")}
               resizeMode="contain"
               style={styles.itemIcon}
             />
           </Animated.View>
-        </TouchableWithoutFeedback>
-        <TouchableWithoutFeedback>
+        </TouchableOpacity>
+
+        <TouchableOpacity>
           <Animated.View
             style={[
               styles.item,
@@ -111,10 +122,12 @@ const AddButton = ({opened, toggleOpened}) => {
               style={styles.itemIcon}
             />
           </Animated.View>
-        </TouchableWithoutFeedback>
-        <TouchableWithoutFeedback
-          onPress={toggleOpened}
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={handlePress}
           style={styles.addButton}>
+
           <Animated.View
             style={[
               styles.addButtonInner,
@@ -130,12 +143,13 @@ const AddButton = ({opened, toggleOpened}) => {
               },
             ]}>
             <Image
-              source={require("../../../../assets/images/Home.png")}
+              source={require("../../../../assets/images/magnify.png")}
               resizeMode="contain"
               style={styles.addButtonIcon}
             />
           </Animated.View>
-        </TouchableWithoutFeedback>
+
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -172,7 +186,7 @@ const styles = StyleSheet.create({
     borderRadius: 30,
   },
   addButtonIcon: {
-    width: 40,
+    width: 30,
     height: 40,
     tintColor: COLORS.white,
   },
@@ -188,8 +202,8 @@ const styles = StyleSheet.create({
     borderRadius: 25,
   },
   itemIcon: {
-    width: 32,
-    height: 32,
+    width: 30,
+    height: 35,
     tintColor: COLORS.white,
   },
 });

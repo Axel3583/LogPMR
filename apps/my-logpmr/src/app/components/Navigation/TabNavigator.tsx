@@ -20,7 +20,7 @@ const TabNavigator = () => {
   const { opened, toggleOpened } = useTabMenu();
   return (
     <Tab.Navigator
-      initialRouteName="Home"
+      initialRouteName="Search"
       screenOptions={{
         headerShown: false,
         tabBarShowLabel: false,
@@ -28,25 +28,7 @@ const TabNavigator = () => {
       }}
     >
       <Tab.Screen
-        name="Home"
-        component={Carte}
-        options={{
-          tabBarItemStyle: {
-            height: 0,
-          },
-          tabBarIcon: ({ focused }) => (
-            <View style={styles.tabIconContainer}>
-              <Image
-                source={require('../../../../assets/images/Home.png')}
-                resizeMode="contain"
-                style={[styles.tabIcon, getIconColor(focused)]}
-              />
-            </View>
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Favoris"
+        name="heart-outline"
         component={FavoriScreen}
         options={{
           tabBarItemStyle: {
@@ -55,7 +37,25 @@ const TabNavigator = () => {
           tabBarIcon: ({ focused }) => (
             <View style={styles.tabIconContainer}>
               <Image
-                source={require('../../../../assets/images/Arrow_Top.png')}
+                source={require('../../../../assets/images/heart-outline.png')}
+                resizeMode="contain"
+                style={[styles.tabIcon, getIconColor(focused)]}
+              />
+            </View>
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="pencil-ruler"
+        component={HomeScreen}
+        options={{
+          tabBarItemStyle: {
+            height: 0,
+          },
+          tabBarIcon: ({ focused }) => (
+            <View style={styles.tabIconContainer}>
+              <Image
+                source={require('../../../../assets/images/pencil-ruler.png')}
                 resizeMode="contain"
                 style={[styles.tabIcon, getIconColor(focused)]}
               />
@@ -65,8 +65,8 @@ const TabNavigator = () => {
       />
 
       <Tab.Screen
-        name="Add"
-        component={HomeScreen}
+        name="Search"
+        component={Carte}
         options={{
           tabBarItemStyle: {
             height: 0,
@@ -87,7 +87,7 @@ const TabNavigator = () => {
           tabBarIcon: ({ focused }) => (
             <View style={styles.tabIconContainer}>
               <Image
-                source={require('../../../../assets/images/Graph.png')}
+                source={require('../../../../assets/images/key-chain-variant.png')}
                 resizeMode="contain"
                 style={[styles.tabIcon, getIconColor(focused)]}
               />
@@ -96,7 +96,7 @@ const TabNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="Service"
+        name="Profil"
         component={ServiceScreen}
         options={{
           tabBarItemStyle: {
@@ -105,7 +105,7 @@ const TabNavigator = () => {
           tabBarIcon: ({ focused }) => (
             <View style={styles.tabIconContainer}>
               <Image
-                source={require('../../../../assets/images/Setting.png')}
+                source={require('../../../../assets/images/account-outline.png')}
                 resizeMode="contain"
                 style={[styles.tabIcon, getIconColor(focused)]}
               />
@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   tabIcon: {
-    width: 32,
+    width: 25,
     height: 32,
   },
 });
