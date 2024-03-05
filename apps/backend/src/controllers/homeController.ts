@@ -14,7 +14,7 @@ const homeController = {
     },
 
     // Récupérer un logement par son ID
-    getHomeById: async (req: Request, res: Response): Promise<any> => {
+    getHomeById: async (req: Request, res: Response): Promise<unknown> => {
         try {
             const home = await Home.findById(req.params.id);
             if (!home) {
@@ -27,7 +27,7 @@ const homeController = {
     },
 
     // Ajouter un nouveau logement
-    createHome: async (req: Request, res: Response): Promise<any> => {
+    createHome: async (req: Request, res: Response): Promise<void> => {
         const newHome = new Home(req.body);
         try {
             const savedHome = await newHome.save();
@@ -38,7 +38,7 @@ const homeController = {
     },
 
     // Mettre à jour un logement
-    updateHome: async (req: Request, res: Response): Promise<any> => {
+    updateHome: async (req: Request, res: Response): Promise<unknown> => {
         try {
             const updatedHome = await Home.findByIdAndUpdate(req.params.id, req.body, { new: true });
             if (!updatedHome) {
@@ -51,7 +51,7 @@ const homeController = {
     },
 
     // Supprimer un logement
-    deleteHome: async (req: Request, res: Response): Promise<any> => {
+    deleteHome: async (req: Request, res: Response): Promise<unknown> => {
         try {
             const deletedHome = await Home.findByIdAndDelete(req.params.id);
             if (!deletedHome) {

@@ -5,12 +5,12 @@ import { Request, Response } from 'express';
 
 const userController = {
     
-    register: async (req: Request, res: Response): Promise<any> => {
+    register: async (req: Request, res: Response): Promise<unknown> => {
         const { email, password, role } = req.body;
         const searchCondition = { email };
         try {
             
-            const existingUser = await User.findOne({ searchCondition });
+            const existingUser = await User.find({ searchCondition });
             if (existingUser) {
                 return res.status(400).json({ message: "Email already registered." });
             }
@@ -26,7 +26,7 @@ const userController = {
         }
     },
 
-    login: async (req: Request, res: Response): Promise<any> => {
+    login: async (req: Request, res: Response): Promise<unknown> => {
         try {
             const { email, password } = req.body;
 

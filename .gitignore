@@ -130,3 +130,4 @@ cache/
 
 apps/my-logpmr-e2e/artifacts
 .angular
+.env
