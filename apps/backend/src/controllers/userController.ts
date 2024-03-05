@@ -10,7 +10,7 @@ const userController = {
         const searchCondition = { email };
         try {
             
-            const existingUser = await User.findOne({ searchCondition });
+            const existingUser = await User.find({ searchCondition });
             if (existingUser) {
                 return res.status(400).json({ message: "Email already registered." });
             }
