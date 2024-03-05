@@ -5,8 +5,6 @@ import dotenv from 'dotenv'; // Chargement des variables d'environnement
 import mongoose from 'mongoose'; // ODM (Object Data Modeling) pour MongoDB
 import UserRoute from './routes/userRoute'; // Importation des routes de l'API // Importation des routes de l'API
 import swaggerDocs from "./utils/swagger";
-import { error } from 'console';
-
 dotenv.config();
 
 const hostname = '0.0.0.0';
