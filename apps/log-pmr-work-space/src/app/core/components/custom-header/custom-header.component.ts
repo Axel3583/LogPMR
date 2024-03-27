@@ -1,0 +1,23 @@
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
+
+@Component({
+  selector: 'logpmr-custom-header',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './custom-header.component.html',
+  styleUrl: './custom-header.component.scss',
+})
+export class CustomHeaderComponent {
+  constructor(private router: Router) {}
+
+  redirectToLogin() {
+    this.router.navigate(['/login']);
+    console.log('okkk');
+  }
+
+  redirectToHome() {
+    this.router.navigate(['/']);
+  }
+}

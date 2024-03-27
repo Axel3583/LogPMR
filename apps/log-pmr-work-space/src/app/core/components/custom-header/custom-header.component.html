@@ -1,0 +1,170 @@
+<!-- Header Component -->
+<div
+  class="relative bg-cover bg-center h-svh shadow-xl"
+  style="
+    background-image: url('https://media.istockphoto.com/id/1471308768/fr/photo/salon-scandinave-avec-fauteuil-gris-sur-fond-mural-blanc-vide.webp?b=1&s=170667a&w=0&k=20&c=V88qg-ESMjrQSzELnU8pN3wliuasQvOdt9knxmuuof4=');
+  "
+>
+  <div class="flex justify-between items-center p-4">
+    <!-- Logo Section -->
+    <button class="flex items-center" (click)="redirectToHome()">
+      <span class="text-3xl font-bold underline">Logo</span>
+    </button>
+
+    <!-- Navigation Links -->
+    <nav
+      style="justify-content: center; width: 40%"
+      class="hidden md:flex md:items-center md:w-auto w-4/6"
+      id="menu"
+    >
+      <ul
+        style="width: 100%"
+        class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0"
+      >
+        <li>
+          <a
+            href="#page1"
+            class="md:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-600"
+            >Page1</a
+          >
+        </li>
+        <li>
+          <a
+            href="#page2"
+            class="md:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-600"
+            >Page2</a
+          >
+        </li>
+        <li>
+          <a
+            href="#page3"
+            class="md:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-600"
+            >Page3</a
+          >
+        </li>
+        <li>
+          <a
+            href="#page4"
+            class="md:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-600"
+            >Page4</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Search Input -->
+    <div
+      style="margin-right: 15px"
+      class="relative text-gray-600 md:block hidden"
+    >
+      <input
+        type="search"
+        name="serch"
+        placeholder="Search"
+        class="bg-white h-10 px-5 rounded-full text-sm focus:outline-none"
+      />
+      <button type="submit" class="absolute right-0 top-0 mt-2.5 mr-4">
+        <svg
+          class="h-4 w-4 fill-current"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          version="1.1"
+          id="Capa_1"
+          x="0px"
+          y="0px"
+          viewBox="0 0 56.966 56.966"
+          style="enable-background: new 0 0 56.966 56.966"
+          xml:space="preserve"
+          width="512px"
+          height="512px"
+        >
+          <path
+            d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Connexion Button -->
+    <div class="relative flex justify-end items-center">
+      <button
+        class="bg-gradient-to-br from-gray-700 to-gray-800 text-white py-2 px-6 rounded-full shadow-lg transform transition duration-300 ease-out hover:scale-105"
+        (click)="redirectToLogin()"
+      >
+        Connexion
+      </button>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="md:hidden flex items-center" type="button">
+      <svg
+        class="h-4 w-4 fill-current"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+        id="Capa_1"
+        x="0px"
+        y="0px"
+        viewBox="0 0 56.966 56.966"
+        style="enable-background: new 0 0 56.966 56.966"
+        xml:space="preserve"
+        width="512px"
+        height="512px"
+      >
+        <path
+          d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"
+        />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Main Content -->
+  <div class="flex flex-col justify-center items-center inset-0 pt-60">
+    <h1 class="text-white text-4xl font-bold mb-6 z-10">
+      Your dream vacation starts here
+    </h1>
+    <div class="flex gap-2 z-10">
+      <div class="relative h-10 w-full min-w-[200px]">
+        <input
+          class="peer h-full w-full rounded-[7px] border border-blue-gray-200 bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+          placeholder=" "
+        />
+        <label
+          class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-pink-500 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-pink-500 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-pink-500 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500"
+        >
+          Départ
+        </label>
+      </div>
+      <div class="relative h-10 w-full min-w-[200px]">
+        <input
+          class="peer h-full w-full rounded-[7px] border border-blue-gray-200 bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+          placeholder=" "
+        />
+        <label
+          class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-pink-500 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-pink-500 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-pink-500 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500"
+        >
+          Outlined
+        </label>
+      </div>
+      <div class="relative h-10 w-full min-w-[200px]">
+        <input
+          class="peer h-full w-full rounded-[7px] border border-blue-gray-200 bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+          placeholder=" "
+        />
+        <label
+          class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-pink-500 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-pink-500 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-pink-500 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500"
+        >
+          Destination
+        </label>
+      </div>
+      <button
+        class="group relative w-80 overflow-hidden rounded-[7px] text-lg font-bold bg-gradient-to-br from-gray-700 to-gray-800 text-white"
+      >
+        Valider
+        <div
+          class="absolute inset-0 h-full w-full scale-0 rounded-2xl transition-all duration-300 group-hover:scale-100 group-hover:bg-white/30"
+        ></div>
+      </button>
+    </div>
+  </div>
+</div>

@@ -11,10 +11,29 @@
   <title>Log-pmr</title>
 </head>
 <body style="text-align: -webkit-center;">
-  <div class="main-content">
-    <logpmr-header></logpmr-header>
-    <router-outlet></router-outlet>
-  </div>
+
+  <!-- app.component.html -->
+
+  @if (isHomePage()) {
+    <header>
+      <div class="main-content">
+        <logpmr-custom-header></logpmr-custom-header>
+        <router-outlet></router-outlet>
+        <logpmr-footer></logpmr-footer>
+      </div>
+    </header>
+  } @else {
+
+    <header>
+      <!-- Contenu du header des autres pages -->
+      <div class="main-content">
+        <logpmr-header></logpmr-header>
+        <router-outlet></router-outlet>
+        <logpmr-footer></logpmr-footer>
+      </div>
+    </header>
+  }
+
   <!-- from cdn -->
   <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/ripple.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
