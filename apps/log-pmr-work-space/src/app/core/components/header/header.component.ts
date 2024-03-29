@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/authentifaction/auth.service';
 
 @Component({
   selector: 'logpmr-header',
@@ -10,8 +11,9 @@ import { Router } from '@angular/router';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  constructor(private router: Router) {}
+  constructor(private router: Router, public authService: AuthService) {}
 
+  
   redirectToLogin() {
     this.router.navigate(['/login']);
   }

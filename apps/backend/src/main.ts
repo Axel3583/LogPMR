@@ -4,7 +4,8 @@ import cors from 'cors'; // Middleware de gestion des CORS (Cross-Origin Resourc
 import dotenv from 'dotenv'; // Chargement des variables d'environnement
 import mongoose from 'mongoose'; // ODM (Object Data Modeling) pour MongoDB
 import UserRoute from './routes/userRoute'; // Importation des routes de l'API // Importation des routes de l'API
-import swaggerDocs from "./utils/swagger";
+import swaggerDocs from './utils/swagger';
+
 dotenv.config();
 
 const hostname = '0.0.0.0';
@@ -34,9 +35,9 @@ UserRoute(server);
 server.use((err, req, res, next) => {
   next(() => {
     res
-    .status(500)
-    .send({ message: 'Internal Server Error', error: err.message });
-  })
+      .status(500)
+      .send({ message: 'Internal Server Error', error: err.message });
+  });
 });
 
 server.listen(port, hostname, () => {

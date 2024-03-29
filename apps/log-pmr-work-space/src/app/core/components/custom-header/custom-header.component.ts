@@ -14,7 +14,6 @@ export class CustomHeaderComponent {
 
   redirectToLogin() {
     this.router.navigate(['/login']);
-    console.log('okkk');
   }
 
   redirectToHome() {
