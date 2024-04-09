@@ -19,4 +19,10 @@
 #mapOverlay.hidden {
     display: none;
   }
+
+  .drawer-content {
+    max-height: 100%; 
+    width: 45%;
+    overflow-y: auto; 
+  }
   

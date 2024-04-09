@@ -12,11 +12,17 @@ import { Router } from '@angular/router';
 export class CustomHeaderComponent {
   constructor(private router: Router) {}
 
+  isload = false;
+
   redirectToLogin() {
     this.router.navigate(['/login']);
   }
 
   redirectToHome() {
     this.router.navigate(['/']);
+  }
+
+  isDate() {
+    return !!this.isload
   }
 }

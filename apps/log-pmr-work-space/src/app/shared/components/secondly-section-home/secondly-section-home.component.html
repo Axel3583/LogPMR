@@ -4,7 +4,180 @@
     <p style="font-size: xx-large">Nos exclusivités</p>
   </div>
 
-  <div class="flex justify-evenly pt-3">
+  <div
+    class="mx-auto grid max-w-screen-xl grid-cols-3 gap-6 p-6 lg:grid-cols-3"
+  >
+    <!-- Card #1 -->
+    <article class="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl">
+      <a href="/home-details">
+        <div class="relative flex overflow-hidden rounded-xl">
+          <!-- Bouton Favoris -->
+
+          <div
+            class="absolute w-14 top-0 right-0 m-2 max-h-[40px] h-1 max-w-[40px] rounded-lg text-center font-sans text-xs font-medium uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+            type="button"
+            data-ripple-light="true"
+          >
+            <span
+              class="absolute w-6 z-10 left-0 top-0 -translate-y-1/2 -translate-x-1/2 transform"
+            >
+              <i
+                class="fas fa-heart text-3xl leading-none"
+                aria-hidden="true"
+              ></i>
+            </span>
+          </div>
+          <!-- Image -->
+          <img
+            src="https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"
+            alt="ui/ux review check"
+          />
+
+          <div
+            class="absolute bottom-3 left-3 inline-flex items-center rounded-lg bg-white p-2 shadow-md"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 text-yellow-400"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+              />
+            </svg>
+            <span class="text-slate-400 ml-1 text-sm">4.9</span>
+          </div>
+        </div>
+
+        <div class="mt-1 p-2">
+          <h2 class="text-slate-700">The Hilton Hotel</h2>
+          <p class="text-slate-400 mt-1 text-sm">Lisbon, Portugal</p>
+
+          <div class="mt-3 flex items-end justify-between">
+            <p>
+              <span class="text-lg font-bold text-blue-500">$850</span>
+              <span class="text-slate-400 text-sm">/night</span>
+            </p>
+
+            <div
+              class="group inline-flex rounded-xl bg-blue-100 p-2 hover:bg-blue-200"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="group-hover:text-blue-500 h-4 w-4 text-blue-400"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </a>
+    </article>
+
+    <!-- Card #2 -->
+    <article class="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl">
+      <a href="/home-details">
+        <div class="relative flex items-end overflow-hidden rounded-xl">
+          <img src="../../../../assets/homeImage.jpeg" alt="Hotel Photo" />
+          <div
+            class="absolute bottom-3 left-3 inline-flex items-center rounded-lg bg-white p-2 shadow-md"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 text-yellow-400"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+              />
+            </svg>
+            <span class="text-slate-400 ml-1 text-sm">4.9</span>
+          </div>
+        </div>
+
+        <div class="mt-1 p-2">
+          <h2 class="text-slate-700">The Hilton Hotel</h2>
+          <p class="text-slate-400 mt-1 text-sm">Lisbon, Portugal</p>
+
+          <div class="mt-3 flex items-end justify-between">
+            <p>
+              <span class="text-lg font-bold text-blue-500">$450</span>
+              <span class="text-slate-400 text-sm">/night</span>
+            </p>
+
+            <div
+              class="group inline-flex rounded-xl bg-blue-100 p-2 hover:bg-blue-200"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="group-hover:text-blue-500 h-4 w-4 text-blue-400"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </a>
+    </article>
+
+    <!-- Card #3 -->
+    <article class="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl">
+      <a href="/home-details">
+        <div class="relative flex items-end overflow-hidden rounded-xl">
+          <img
+            src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGhvbWV8ZW58MHx8MHx8fDA%3D"
+            alt="Hotel Photo"
+          />
+          <div
+            class="absolute bottom-3 left-3 inline-flex items-center rounded-lg bg-white p-2 shadow-md"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 text-yellow-400"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+              />
+            </svg>
+            <span class="text-slate-400 ml-1 text-sm">4.9</span>
+          </div>
+        </div>
+
+        <div class="mt-1 p-2">
+          <h2 class="text-slate-700">The Hilton Hotel</h2>
+          <p class="text-slate-400 mt-1 text-sm">Lisbon, Portugal</p>
+
+          <div class="mt-3 flex items-end justify-between">
+            <p>
+              <span class="text-lg font-bold text-blue-500">$1,450</span>
+              <span class="text-slate-400 text-sm">/night</span>
+            </p>
+
+            <div
+              class="group inline-flex rounded-xl bg-blue-100 p-2 hover:bg-blue-200"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="group-hover:text-blue-500 h-4 w-4 text-blue-400"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </a>
+    </article>
+    <!-- <div class="flex justify-evenly pt-3">
     <div (click)="goToHomePage()">
       <div
         class="px-2.5 relative flex max-w-[26rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg"
@@ -553,5 +726,6 @@
         </div>
       </div>
     </div>
+  </div> -->
   </div>
 </div>

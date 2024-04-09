@@ -3,6 +3,8 @@ import { provideRouter } from '@angular/router';
 import { appRoutes } from './app.routes';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { JwtModule } from "@auth0/angular-jwt";
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 export function tokenGetter() {
@@ -10,7 +12,8 @@ export function tokenGetter() {
 }
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(appRoutes), 
+  providers: [
+    provideRouter(appRoutes), 
     importProvidersFrom(
       JwtModule.forRoot({
           config: {
@@ -19,6 +22,9 @@ export const appConfig: ApplicationConfig = {
               disallowedRoutes: ["http://localhost:3000/login/"],
           },
       }),
+      [BrowserModule, BrowserAnimationsModule]
   ),
-    provideHttpClient(withInterceptorsFromDi()),],
+    provideHttpClient(withInterceptorsFromDi()),
+    
+  ],
 };
